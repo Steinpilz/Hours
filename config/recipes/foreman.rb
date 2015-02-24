@@ -9,10 +9,8 @@ namespace :foreman do
       template ".env.erb", fetch(:dotenv_path)
     end
   end
-  after "deploy:setup", "foreman:setup_base_files"
 
   task :setup do
-    invoke :'foreman:symlink_base_files'
     invoke :'foreman:update_foreman_file'
     invoke :'foreman:overwrite_procfile'
     invoke :'foreman:export'
@@ -63,17 +61,7 @@ namespace :foreman do
   end
 
   def foreman_exec(*args)
-    if sudo_type = fetch(:foreman_use_sudo)
-      if sudo_type.to_s == "rbenv"
-        execute(:rbenv, :sudo, *args)
-      elsif sudo_type.to_s == "rvm"
-        execute(:rvmsudo *args)
-      else
-        sudo(*args)
-      end
-    else
-      execute(*args)
-    end
+    execute(*args)
   end
 
   after "deploy:started", "foreman:stop"

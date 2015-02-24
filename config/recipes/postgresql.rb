@@ -19,6 +19,14 @@ namespace :postgresql do
   end
   after "deploy:setup", "postgresql:setup"
 
+  desc "Create a database for this application."
+  task :create_database do
+    on roles :db do
+      execute %Q{#{sudo} -u postgres psql -c "create user #{postgresql_user} with password '#{postgresql_password}';"}
+      execute %Q{#{sudo} -u postgres psql -c "create database #{postgresql_database} owner #{postgresql_user};"}
+    end
+  end
+
   desc "Symlink the database.yml file into latest release"
   task :symlink do
     on roles :app do

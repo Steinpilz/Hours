@@ -42,6 +42,7 @@ gem "audited-activerecord", "~> 4.0"
 gem "paperclip", "~> 4.2"
 gem "redcarpet"
 gem "dotenv-rails"
+gem "foreman"
 
 # caching
 
@@ -52,7 +53,6 @@ gem "memcachier"
 group :development do
   gem "better_errors"
   gem "binding_of_caller"
-  gem "foreman"
   gem "pry"
   gem "spring"
   gem "spring-commands-rspec"
