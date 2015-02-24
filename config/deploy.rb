@@ -11,6 +11,8 @@ lock '3.2.1'
 user = "deployer"
 application = "hours"
 
+set :default_env, { path: "~/.rbenv/shims:~/.rbenv/bin:$PATH" }
+
 set :application, application
 set :user, user
 set :deploy_to, "/var/www/apps/#{application}"
@@ -31,11 +33,13 @@ set :rbenv_ruby, '2.2.0'
 after "deploy", "deploy:cleanup"
 
 set :bundle_bins, fetch(:bundle_bins, []).push('foreman')
-set :foreman_use_sudo, false
+set :foreman_use_sudo, :rbenv
 set :foreman_template, 'upstart'
 set :foreman_export_path, '/etc/init/sites'
 set :foreman_roles, :all
 set :foreman_app, -> { fetch(:application) }
+
+set :normalize_asset_timestamps, %{public/images public/javascripts public/stylesheets}
 
 if !fetch(:rvm_map_bins).nil?
   set :rvm_map_bins, fetch(:rvm_map_bins).push('foreman')

@@ -23,8 +23,9 @@ namespace :foreman do
     invoke :'foreman:update_foreman_file'
     invoke :'foreman:overwrite_procfile'
     invoke :'foreman:export'
+    invoke :'foreman:restart'
   end
-  after "deploy:updated", "foreman:setup"
+  after "deploy:finished", "foreman:setup"
 
   desc "Update .foreman file"
   task :update_foreman_file do
@@ -63,13 +64,10 @@ namespace :foreman do
     desc "#{command} foreman"
     task command do
       on roles fetch(:foreman_roles) do
-        foreman_exec command, fetch(:foreman_app)
+        foreman_exec command, fetch(:foreman_app) rescue RuntimeError
       end
     end
   end
-
-  after "deploy:finished", "foreman:restart"
-  after "deploy:started", "foreman:stop"
 
   def foreman_exec(*args)
     if sudo_type = fetch(:foreman_use_sudo)
@@ -84,5 +82,7 @@ namespace :foreman do
       execute(*args)
     end
   end
+
+  after "deploy:started", "foreman:stop"
 end
 
