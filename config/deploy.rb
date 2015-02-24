@@ -35,7 +35,7 @@ after "deploy", "deploy:cleanup"
 set :bundle_bins, fetch(:bundle_bins, []).push('foreman')
 set :foreman_use_sudo, :rbenv
 set :foreman_template, 'upstart'
-set :foreman_export_path, '/etc/init/sites'
+set :foreman_export_path, '/etc/init'
 set :foreman_roles, :all
 set :foreman_app, -> { fetch(:application) }
 

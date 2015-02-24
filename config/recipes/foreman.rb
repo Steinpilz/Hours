@@ -38,16 +38,12 @@ namespace :foreman do
       opts = {
         app: fetch(:application),
         log: File.join(shared_path, 'log'),
+        user: fetch(:user)
       }.merge fetch(:foreman_options, {})
 
       execute(:mkdir, "-p", opts[:log])
 
-      within release_path do
-        foreman_exec :foreman, 'export',
-          fetch(:foreman_template),
-          fetch(:foreman_export_path),
-          opts.map { |opt, value| "--#{opt}='#{value}'" }.join(' ')
-      end
+      execute "cd '#{release_path}' && ~/.rbenv/bin/rbenv sudo bundle exec foreman export #{fetch(:foreman_template)} #{fetch(:foreman_export_path)} #{opts.map { |opt, value| "--#{opt}='#{value}'" }.join(' ')}"
     end
   end
 
@@ -55,13 +51,9 @@ namespace :foreman do
     desc "#{command} foreman"
     task command do
       on roles fetch(:foreman_roles) do
-        foreman_exec command, fetch(:foreman_app) rescue RuntimeError
+        execute :sudo, command, fetch(:foreman_app) rescue RuntimeError
       end
     end
-  end
-
-  def foreman_exec(*args)
-    execute(*args)
   end
 
   after "deploy:started", "foreman:stop"
