@@ -10,7 +10,7 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  if Rails.env.staging? || Rails.env.production?
+  if Rails.env.staging? || Rails.env.production? || Rails.env.steinpilz?
     config.mailer_sender = "info@#{SMTP_SETTINGS[:domain]}"
   else
     config.mailer_sender = "info@hours.dev"
