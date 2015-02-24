@@ -1,0 +1,8 @@
+<%= fetch(:stage) %>:
+  sessions:
+    default:
+      database: <%= fetch(:mongo_db_name) %>
+      hosts:
+        - <%= fetch(:mongo_host) %>
+  options:
+    identity_map_enabled: true
