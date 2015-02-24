@@ -167,6 +167,7 @@ en:
       date: Date
       user: User
       project: Project
+      code: Code
       category: Category
       client: Client
       hours: Hours

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150106133726) do
+ActiveRecord::Schema.define(version: 20150224180157) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -105,10 +105,9 @@ ActiveRecord::Schema.define(version: 20150106133726) do
     t.boolean  "billable",    default: false
     t.integer  "client_id"
     t.integer  "budget"
-    t.boolean  "billable",    default: false
     t.boolean  "archived",    default: false, null: false
     t.text     "description"
-    t.integer  "budget"
+    t.string   "code"
   end
 
   add_index "projects", ["archived"], name: "index_projects_on_archived", using: :btree

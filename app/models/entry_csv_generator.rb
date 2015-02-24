@@ -17,6 +17,7 @@ class EntryCSVGenerator
           entry.date,
           entry.user,
           entry.project,
+          entry.code,
           entry.category,
           entry.client,
           entry.hours,

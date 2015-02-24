@@ -7,6 +7,10 @@ class ReportEntry < SimpleDelegator
     __getobj__.project.name
   end
 
+  def code 
+    __getobj__.project.code
+  end
+
   def category
     __getobj__.category.name
   end

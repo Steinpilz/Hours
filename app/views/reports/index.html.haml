@@ -9,6 +9,7 @@
         %th= t("reports.headers.date")
         %th= t("reports.headers.user")
         %th= t("reports.headers.project")
+        %th= t("reports.headers.code")
         %th= t("reports.headers.category")
         %th= t("reports.headers.client")
         %th= t("reports.headers.hours")
@@ -21,6 +22,7 @@
         %td= entry.date
         %td= link_to entry.user.full_name, entry.user
         %td= link_to entry.project.name, entry.project
+        %td= link_to entry.project.code || '-', entry.project
         %td= entry.category.name
         %td= link_to entry.project.client.name, entry.project.client if entry.project.client
         %td= entry.hours

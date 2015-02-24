@@ -10,8 +10,8 @@
 #  date        :date             not null
 #  created_at  :datetime
 #  updated_at  :datetime
-#  description :string(255)
-#  billed      :boolean
+#  description :string
+#  billed      :boolean          default("false")
 #
 
 class Entry < ActiveRecord::Base

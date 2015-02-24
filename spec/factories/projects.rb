@@ -21,16 +21,17 @@ end
 #
 # Table name: projects
 #
-#  id         :integer          not null, primary key
-#  name       :string(255)      default(""), not null
-#  created_at :datetime
-#  updated_at :datetime
-#  slug       :string(255)
-#  budget     :integer
-#  billable   :boolean          default(FALSE)
-#  client_id  :integer
-#  archived   :boolean          default(FALSE), not null
-#  billable   :boolean          default(FALSE)
+#  id          :integer          not null, primary key
+#  name        :string           default(""), not null
+#  created_at  :datetime
+#  updated_at  :datetime
+#  slug        :string
+#  billable    :boolean          default("false")
+#  client_id   :integer
+#  budget      :integer
+#  archived    :boolean          default("false"), not null
+#  description :text
+#  code        :string
 #
 
 # Read about factories at https://github.com/thoughtbot/factory_girl
