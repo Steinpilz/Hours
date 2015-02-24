@@ -11,8 +11,6 @@ lock '3.2.1'
 user = "deployer"
 application = "hours"
 
-set :default_env, { path: "~/.rbenv/shims:~/.rbenv/bin:$PATH" }
-
 set :application, application
 set :user, user
 set :deploy_to, "/var/www/apps/#{application}"
@@ -29,6 +27,8 @@ set :ssh_options, {
 
 set :rbenv_custom_path, '/home/deployer/.rbenv'
 set :rbenv_ruby, '2.2.0'
+
+set :default_env, { path: "#{fetch(:rbenv_custom_path)}/shims:#{fetch(:rbenv_custom_path)}/bin:$PATH" }
 
 after "deploy", "deploy:cleanup"
 

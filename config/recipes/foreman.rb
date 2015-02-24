@@ -14,7 +14,7 @@ namespace :foreman do
     invoke :'foreman:update_foreman_file'
     invoke :'foreman:overwrite_procfile'
     invoke :'foreman:export'
-    invoke :'foreman:restart'
+    invoke :'foreman:start'
   end
   after "deploy:finished", "foreman:setup"
 
