@@ -92,4 +92,4 @@ group :development do
 end
 
 
-gem 'capistrano', '~> 3.2.0'
+gem 'capistrano', '~> 3.2.1'

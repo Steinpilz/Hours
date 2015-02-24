@@ -1,10 +1,10 @@
 namespace :postgresql do
   desc "Install the latest stable release of PostgreSQL."
-  task :install, only: {primary: true} do
+  task :install do
     on roles :db do
-      run "#{sudo} add-apt-repository ppa:pitti/postgresql"
-      run "#{sudo} apt-get -y update"
-      run "#{sudo} apt-get -y install postgresql libpq-dev"
+      execute "#{sudo} add-apt-repository ppa:pitti/postgresql"
+      execute "#{sudo} apt-get -y update"
+      execute "#{sudo} apt-get -y install postgresql libpq-dev"
     end
 
   end
@@ -13,7 +13,7 @@ namespace :postgresql do
   desc "Generate the database.yml configuration file."
   task :setup do
     on roles :app do
-      run "mkdir -p #{shared_path}/config"
+      execute "mkdir -p #{shared_path}/config"
       template "postgresql.yml.erb", "#{shared_path}/config/database.yml"
     end
   end
@@ -22,8 +22,8 @@ namespace :postgresql do
   desc "Symlink the database.yml file into latest release"
   task :symlink do
     on roles :app do
-      run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+      execute "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
     end
   end
-  after "deploy:finalize_update", "postgresql:symlink"
+  after "deploy:updated", "postgresql:symlink"
 end

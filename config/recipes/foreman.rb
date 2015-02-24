@@ -1,5 +1,5 @@
 set :procfile_path, "#{current_path}/Procfile"
-set :dotenv_path, "#{current_path}/.env"
+set :dotenv_path, "#{shared_path}/config/.env"
 set :foreman_path, "#{current_path}/.foreman"
 
 namespace :foreman do
@@ -11,12 +11,20 @@ namespace :foreman do
   end
   after "deploy:setup", "foreman:setup_base_files"
 
+  desc "Symlink .env file"
+  task :symlink_base_files do
+    on roles fetch(:foreman_roles) do
+      execute "ln -nfs #{shared_path}/config/.env #{release_path}/.env"
+    end
+  end
+
   task :setup do
+    invoke :'foreman:symlink_base_files'
     invoke :'foreman:update_foreman_file'
     invoke :'foreman:overwrite_procfile'
     invoke :'foreman:export'
   end
-  after "deploy:finalize_update", "foreman:setup"
+  after "deploy:updated", "foreman:setup"
 
   desc "Update .foreman file"
   task :update_foreman_file do

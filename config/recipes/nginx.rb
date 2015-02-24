@@ -19,7 +19,7 @@ namespace :nginx do
   end
   after "deploy:setup", "nginx:setup"
   
-  %w[start stop restart].each do |command|
+  %w[start stop restart reload].each do |command|
     desc "#{command} nginx"
     task command do
       on roles :web do
@@ -27,5 +27,5 @@ namespace :nginx do
       end
     end
   end
-  after "nginx:setup", "nginx:restart"
+  after "nginx:setup", "nginx:reload"
 end

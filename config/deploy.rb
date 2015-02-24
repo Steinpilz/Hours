@@ -26,7 +26,7 @@ set :ssh_options, {
 }
 
 set :rbenv_custom_path, '/home/deployer/.rbenv'
-set :rbenv_ruby, '2.1.2'
+set :rbenv_ruby, '2.2.0'
 
 after "deploy", "deploy:cleanup"
 
