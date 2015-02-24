@@ -41,6 +41,7 @@ gem "haml-rails"
 gem "audited-activerecord", "~> 4.0"
 gem "paperclip", "~> 4.2"
 gem "redcarpet"
+gem "dotenv-rails"
 
 # caching
 
@@ -58,7 +59,6 @@ group :development do
 end
 
 group :development, :test do
-  gem "dotenv-rails"
   gem "factory_girl_rails"
   gem "pry-rails"
   gem "rspec-rails", "~> 3.0"

@@ -1,5 +1,5 @@
 set :procfile_path, "#{current_path}/Procfile"
-set :dotenv_path, "#{shared_path}/config/.env"
+set :dotenv_path, "#{shared_path}/.env"
 set :foreman_path, "#{current_path}/.foreman"
 
 namespace :foreman do
@@ -10,13 +10,6 @@ namespace :foreman do
     end
   end
   after "deploy:setup", "foreman:setup_base_files"
-
-  desc "Symlink .env file"
-  task :symlink_base_files do
-    on roles fetch(:foreman_roles) do
-      execute "ln -nfs #{shared_path}/config/.env #{release_path}/.env"
-    end
-  end
 
   task :setup do
     invoke :'foreman:symlink_base_files'
