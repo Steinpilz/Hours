@@ -5,8 +5,7 @@ namespace :db do
   	desc "TODO"
   	task import_projects: :environment do
 	  	if Hours.single_tenant_mode?
-	    	print "File path: "
-  			file_path = "/users/filipovich/downloads/harvest_project8_list1.csv"#STDIN.gets.chomp 
+  			file_path = Rails.root.join('data/harvest_projects.csv')
   			csv_projects_read(file_path)
 		else
 		    puts "You're not in single tenant mode. If you want to use the single tenant mode set: 'SINGLE_TENANT_MODE=true' in your environment variables"
@@ -16,8 +15,7 @@ namespace :db do
 
 	task import_hours: :environment do
   		if Hours.single_tenant_mode?
-	    	print "File path: "
-  			file_path = "/users/filipovich/downloads/harvest_time_report_from.csv"#STDIN.gets.chomp 
+  			file_path =  Rails.root.join('data/harvest_time_report_from.csv')
   			csv_hours_read(file_path)
 		else
 		    puts "You're not in single tenant mode. If you want to use the single tenant mode set: 'SINGLE_TENANT_MODE=true' in your environment variables"
