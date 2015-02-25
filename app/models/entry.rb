@@ -6,7 +6,7 @@
 #  project_id  :integer          not null
 #  category_id :integer          not null
 #  user_id     :integer          not null
-#  hours       :integer          not null
+#  hours       :decimal(, )      not null
 #  date        :date             not null
 #  created_at  :datetime
 #  updated_at  :datetime
@@ -28,7 +28,7 @@ class Entry < ActiveRecord::Base
 
   validates :user, :project, :category, :date, presence: true
   validates :hours, presence: true,
-                    numericality: { greater_than: 0, only_integer: true }
+                    numericality: { greater_than: 0 }
 
   accepts_nested_attributes_for :taggings
 
