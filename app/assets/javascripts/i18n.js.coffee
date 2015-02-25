@@ -18,3 +18,12 @@ window.I18n =
     checked:
       pre: 'Je hebt '
       post: ' entries geselecteerd'
+  de:
+    date:
+      today: 'today'
+      yesterday: 'yesterday'
+      future: 'days in the future'
+      dateAgo: 'days ago'
+    checked:
+      pre: 'You\'ve marked '
+      post: ' entries to be billed'
