@@ -1,5 +1,5 @@
 require "csv"
-require "Date"
+require "date"
 
 namespace :db do
   	desc "TODO"
