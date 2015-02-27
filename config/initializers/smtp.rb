@@ -1,4 +1,4 @@
-if Rails.env.staging? || Rails.env.production? || Rails.env.steinpilz?
+if Rails.env.staging? || Rails.env.production? || Rails.env.steinpilz? || Rails.env.appouting?
   SMTP_SETTINGS = {
     address: ENV.fetch('SMTP_ADDRESS'), 
     authentication: :plain,
