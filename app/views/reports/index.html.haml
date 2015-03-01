@@ -3,6 +3,8 @@
     .container
       = render "filters"
       = link_to t("entries.download_csv"), reports_path(download_csv_params)
+      %br
+      = link_to t("reports.download_all_files"), download_all_files_reports_path(download_csv_params)
   %table
     %thead
       %tr
@@ -19,7 +21,7 @@
     %tbody
     - @entries.each do |entry|
       %tr.info-row
-        %td= entry.date
+        %td= entry.date.strftime(EntriesController::DATE_FORMAT)
         %td= link_to entry.user.full_name, entry.user
         %td= link_to entry.project.name, entry.project
         %td= link_to entry.project.code || '-', entry.project

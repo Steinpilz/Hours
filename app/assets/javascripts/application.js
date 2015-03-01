@@ -24,7 +24,14 @@ var Hours = Hours || {
 
 new Pikaday({
   field: $('#datepicker')[0],
-  format: 'DD/MM/YYYY'
+  format: 'DD.MM.YYYY'
+});
+
+$(".datepicker").each(function(){
+  var self = this;
+  new Pikaday({ 
+      field: self ,
+      format: 'DD.MM.YYYY'});
 });
 
 $('.alert').ready(function() {

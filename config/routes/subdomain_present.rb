@@ -8,7 +8,13 @@ resources :entries, only: [:create, :destroy, :update, :edit] do
   resources :audits, only: [:index]
 end
 
-resources :reports, only: [:index]
+resources :reports, only: [:index] do
+	collection do 
+		get "download_all_files"
+	end
+	member do
+	end
+end
 
 resources :billables, only: [:index]
 

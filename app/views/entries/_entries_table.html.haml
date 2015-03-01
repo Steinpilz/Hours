@@ -13,7 +13,7 @@
     - @entries.each do |entry|
       - localized_cache cache_key_for_current_user(entry) do
         %tr.info-row
-          %td= l(entry.date)
+          %td= entry.date.strftime(EntriesController::DATE_FORMAT)
           %td= link_to entry.project.name, entry.project
           %td.center= entry.hours
           %td.hide-for-mobile

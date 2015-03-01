@@ -1,5 +1,5 @@
 ---
-en:
+de:
   audits:
     nothing: nothing
     title: Audit Log
@@ -164,13 +164,13 @@ en:
     update_button: Update
   report:
     headers:
-      date: Date
+      date: Datum
       user: User
-      project: Project
-      code: Code
+      project: Projekt
+      code: Request
       category: Category
       client: Client
-      hours: Hours
+      hours: Stunden
       billable: Billable
       billed: Billed
       description: Description

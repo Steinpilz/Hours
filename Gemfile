@@ -43,7 +43,8 @@ gem "paperclip", "~> 4.2"
 gem "redcarpet"
 gem "dotenv-rails"
 gem "foreman"
-
+gem 'rubyzip'
+gem 'zip-zip'
 # caching
 
 gem "kgio" # faster I/O

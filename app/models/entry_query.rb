@@ -7,7 +7,9 @@ class EntryQuery
   def filter
     result = entries
     filter_params.each do |filter, value|
-      result = result.public_send(filter, value) if present?(value)
+      if present?(value)
+        result = result.public_send(filter, value) 
+      end
     end
     result
   end
@@ -38,11 +40,11 @@ class EntryQuery
     end
 
     def from_date(param)
-      where("entries.created_at > ?", param)
+      where("entries.date >= ?", Date.strptime(param, EntriesController::DATE_FORMAT))
     end
 
     def to_date(param)
-      where("entries.created_at < ?", param)
+      where("entries.date <= ?", Date.strptime(param, EntriesController::DATE_FORMAT))
     end
 
     def archived(param)

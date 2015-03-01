@@ -1,7 +1,7 @@
 class EntriesController < ApplicationController
   include CSVDownload
 
-  DATE_FORMAT = "%d/%m/%Y".freeze
+  DATE_FORMAT = "%d.%m.%Y".freeze
 
   def create
     @entry = Entry.new(entry_params)
