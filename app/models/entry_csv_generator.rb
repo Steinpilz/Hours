@@ -42,7 +42,7 @@ class EntryCSVGenerator
           entry.date,
           entry.project,
           entry.code,
-          entry.hours
+          entry.hours.to_s.gsub(".",",")
         ]
       end
     end
@@ -55,7 +55,7 @@ class EntryCSVGenerator
         csv << [
           entry[:project],
           entry[:code],
-          entry[:hours]
+          entry[:hours].to_s.gsub(".",",")
         ]
       end
     end
