@@ -24,14 +24,31 @@ var Hours = Hours || {
 
 new Pikaday({
   field: $('#datepicker')[0],
-  format: 'DD.MM.YYYY'
+  format: 'DD.MM.YYYY',
+  firstDay: 1,
+  i18n: {
+    previousMonth : 'Zurück',
+    nextMonth     : 'Nächste',
+    months        : ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'],
+    weekdays      : ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"],
+    weekdaysShort : ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"]
+  }
 });
 
 $(".datepicker").each(function(){
   var self = this;
   new Pikaday({ 
       field: self ,
-      format: 'DD.MM.YYYY'});
+      format: 'DD.MM.YYYY',
+      firstDay: 1,
+      i18n: {
+         previousMonth : 'Zurück',
+          nextMonth     : 'Nächste',
+          months        : ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'],
+          weekdays      : ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"],
+          weekdaysShort : ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"]
+        }
+    });
 });
 
 $('.alert').ready(function() {
