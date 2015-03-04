@@ -22,17 +22,13 @@ var Hours = Hours || {
   }
 };
 
+var lang = $('body').data('language');
+
 new Pikaday({
   field: $('#datepicker')[0],
   format: 'DD.MM.YYYY',
   firstDay: 1,
-  i18n: {
-    previousMonth : 'Zurück',
-    nextMonth     : 'Nächste',
-    months        : ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'],
-    weekdays      : ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"],
-    weekdaysShort : ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"]
-  }
+  i18n: I18n[lang].pikaday
 });
 
 $(".datepicker").each(function(){
@@ -41,13 +37,7 @@ $(".datepicker").each(function(){
       field: self ,
       format: 'DD.MM.YYYY',
       firstDay: 1,
-      i18n: {
-         previousMonth : 'Zurück',
-          nextMonth     : 'Nächste',
-          months        : ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'],
-          weekdays      : ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"],
-          weekdaysShort : ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"]
-        }
+      i18n: I18n[lang].pikaday
     });
 });
 

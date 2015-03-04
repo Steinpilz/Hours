@@ -8,6 +8,12 @@ window.I18n =
     checked:
       pre: 'You\'ve marked '
       post: ' entries to be billed'
+    pikaday:
+      previousMonth : 'Previous Month',
+      nextMonth     : 'Next Month',
+      months        : ['January','February','March','April','May','June','July','August','September','October','November','December'],
+      weekdays      : ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
+      weekdaysShort : ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
 
   nl:
     date:
@@ -27,3 +33,9 @@ window.I18n =
     checked:
       pre: 'You\'ve marked '
       post: ' entries to be billed'
+    pikaday:
+      previousMonth : 'Zurück',
+      nextMonth     : 'Nächste',
+      months        : ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'],
+      weekdays      : ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'],
+      weekdaysShort : ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa']
