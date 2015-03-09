@@ -11,6 +11,14 @@ class TimeSeries
     YearlyTimeSeries.new(resource)
   end
 
+  def self.last_week(resource)
+    LastWeekTimeSeries.new(resource)
+  end
+
+  def self.last_month(resource)
+    LastMonthTimeSeries.new(resource)
+  end
+
   def serialize
     {
       labels: labels,

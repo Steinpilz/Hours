@@ -176,8 +176,10 @@ en:
       description: Description
     filters: filters
     hours_per_day: Hours per day
-    monthly: 1 month
-    weekly: 1 week
+    last_month: last month
+    last_week: last week
+    monthly: current month
+    weekly: current week
     yearly: 1 year
     download_all_files: Download All Files
   restricted: Restricted

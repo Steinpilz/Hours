@@ -1,7 +1,8 @@
 class TimeSeries::MonthlyTimeSeries < TimeSeries
   def initialize(resource)
     @resource = resource
-    @time_span = (29.days.ago.to_date..Date.current).freeze
+    
+    @time_span = (Date.today.at_beginning_of_month..Date.today.end_of_month).freeze
   end
 
   def chart
