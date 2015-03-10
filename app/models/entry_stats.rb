@@ -20,9 +20,9 @@ class EntryStats
     collection.map do |subject|
       @subject = subject
       {
-        value: hours_for_subject,
+        value: (hours_for_subject * 100).to_i,
         color: subject.label.pastel_color,
-        label: subject.label,
+        label: "#{hours_for_subject} : #{subject.label}",
         highlight: "gray"
       }
     end

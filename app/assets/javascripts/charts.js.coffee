@@ -31,7 +31,9 @@ PIE_CHART_CONFIG = {
   segmentStrokeWidth: 2,
   responsive: false,
   animationSteps: 50,
-  animationEasing: 'easeOutQuart'
+  animationEasing: 'easeOutQuart',
+  tooltipTemplate: "<%if (label){%><%=label%><%}%>",
+  tooltipFontSize: 8
 }
 
 # Hours per project diagram
