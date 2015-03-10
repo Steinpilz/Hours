@@ -35,7 +35,7 @@ class TimeSeries
   end
 
   def entries_for_time_span
-    @resource.entries.where(created_at: range_for_entries)
+    @resource.entries.where(date: @time_span)
   end
 
   private
