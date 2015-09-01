@@ -15,7 +15,7 @@ class EntryCSVGenerator
   end
 
   def generate
-    CSV.generate do |csv|
+    CSV.generate(EntryCSVGenerator.option) do |csv|
       csv << @report.headers
       @report.each_row do |entry|
         csv << [
@@ -35,7 +35,7 @@ class EntryCSVGenerator
   end
 
   def generate_user
-    CSV.generate do |csv|
+    CSV.generate(EntryCSVGenerator.option) do |csv|
       csv << @report.headers_user
       @report.each_row do |entry|
         csv << [
@@ -49,7 +49,7 @@ class EntryCSVGenerator
   end
 
   def self.generate_projects(entries)
-    CSV.generate do |csv|
+    CSV.generate(EntryCSVGenerator.option) do |csv|
       csv << Report.headers_projects
       entries.each do |entry|
         csv << [
@@ -60,4 +60,10 @@ class EntryCSVGenerator
       end
     end
   end
+  def self.option
+    {
+      col_sep:";"
+    }
+  end
+
 end
