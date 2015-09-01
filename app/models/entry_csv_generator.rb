@@ -63,7 +63,7 @@ class EntryCSVGenerator
   def self.option
     {
       col_sep:";",
-      encoding:"UTF-16BE"
+      encoding:"UTF-8"
     }
   end
 
