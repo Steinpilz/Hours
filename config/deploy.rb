@@ -1,5 +1,5 @@
 # config valid only for Capistrano 3.1
-lock '3.2.1'
+lock '3.4.0'
 
 # Check-List
 # 1. bundle exec cap :stage deploy:install
@@ -16,9 +16,9 @@ set :user, user
 set :deploy_to, "/var/www/apps/#{application}"
 set :deploy_via, :remote_cache
 
-#set :scm, :git
-#set :repo_url, "git@github.com:ivanbenko/#{application}.git"
-#set :keep_releases, 5
+set :scm, :git
+set :repo_url, "git@github.com:ivanbenko/#{application}.git"
+set :keep_releases, 5
 
 # set :pty, true
 set :ssh_options, {
