@@ -9,7 +9,7 @@ class AuditsController < ApplicationController
 
   def audit_log
     if params.key?(:entry_id)
-      return Entry.find(params[:entry_id]).audits
+      return policy_scope(Entry).find(params[:entry_id]).audits
     end
 
     if params.key?(:project_id)

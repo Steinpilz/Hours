@@ -4,9 +4,9 @@ class EntriesController < ApplicationController
   DATE_FORMAT = "%d.%m.%Y".freeze
 
   def create
-    authorize
-    
     @entry = Entry.new(entry_params)
+
+    authorize @entry
     @entry.user = current_user
     if @entry.save
       redirect_to root_path, notice: t(:entry_created)
@@ -26,6 +26,8 @@ class EntriesController < ApplicationController
   end
 
   def update
+    authorize resource
+
     if resource.update_attributes(entry_params)
       redirect_to user_entries_path(current_user), notice: t("entry_saved")
     else
@@ -34,14 +36,14 @@ class EntriesController < ApplicationController
   end
 
   def edit
-    authorize
+    authorize resource
 
     resource
   end
 
 
   def destroy
-    authorize
+    authorize resource
 
     resource.destroy
     redirect_to user_entries_path(current_user), notice: t('entry_deleted')

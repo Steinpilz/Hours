@@ -2,6 +2,7 @@ include TimeSeriesInitializer
 
 class UsersController < ApplicationController
   def show
+    authorize resource
     @time_series = time_series_for(resource)
   end
 
@@ -11,11 +12,12 @@ class UsersController < ApplicationController
 
   def edit
     @user = current_user
-    authorize 
+    authorize @user
   end
 
   def update
     @user = current_user
+    authorize @user
     if @user.update_with_password(user_params)
       redirect_to edit_user_path, notice: t(:user_updated)
     else

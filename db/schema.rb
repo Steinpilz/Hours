@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20151001153909) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "subdomain",  default: "", null: false
-    t.integer  "owner_id",   default: 0,  null: false
+    t.integer  "owner_id",                null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -102,9 +102,9 @@ ActiveRecord::Schema.define(version: 20151001153909) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
+    t.integer  "budget"
     t.boolean  "billable",    default: false
     t.integer  "client_id"
-    t.integer  "budget"
     t.boolean  "archived",    default: false, null: false
     t.text     "description"
     t.string   "code"

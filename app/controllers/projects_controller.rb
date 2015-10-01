@@ -4,10 +4,11 @@ class ProjectsController < ApplicationController
   def index
     @projects = policy_scope(Project).unarchived.by_last_updated.page(params[:page]).per(7)
     @entry = Entry.new
-    @activities = Entry.by_last_created_at.limit(30)
+    @activities = policy_scope(Entry).by_last_created_at.limit(30)
   end
 
   def show
+    authorize resource
     @time_series = time_series_for(resource)
   end
 

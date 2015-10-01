@@ -26,6 +26,10 @@ class ApplicationPolicy
     user.admin?
   end
 
+  def update?
+    edit?
+  end
+
   def destroy?
      user.admin?
   end
