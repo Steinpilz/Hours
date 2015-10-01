@@ -4,6 +4,8 @@ class EntriesController < ApplicationController
   DATE_FORMAT = "%d.%m.%Y".freeze
 
   def create
+    authorize
+    
     @entry = Entry.new(entry_params)
     @entry.user = current_user
     if @entry.save
@@ -15,7 +17,7 @@ class EntriesController < ApplicationController
 
   def index
     @user = User.find_by_slug(params[:user_id])
-    @entries = @user.entries.by_date.page(params[:page]).per(20)
+    @entries = policy_scope(Entry).where(user: @user).by_date.page(params[:page]).per(20)
 
     respond_to do |format|
       format.html { @entries }
@@ -32,11 +34,15 @@ class EntriesController < ApplicationController
   end
 
   def edit
+    authorize
+
     resource
   end
 
 
   def destroy
+    authorize
+
     resource.destroy
     redirect_to user_entries_path(current_user), notice: t('entry_deleted')
   end

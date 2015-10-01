@@ -6,11 +6,12 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.all
+    @users = policy_scope(User)
   end
 
   def edit
     @user = current_user
+    authorize 
   end
 
   def update

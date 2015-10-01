@@ -45,6 +45,7 @@ gem "dotenv-rails"
 gem "foreman"
 gem 'rubyzip'
 gem 'zip-zip'
+gem 'pundit'
 # caching
 
 gem "kgio" # faster I/O

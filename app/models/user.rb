@@ -31,6 +31,7 @@
 #  invited_by_id          :integer
 #  invited_by_type        :string
 #  invitations_count      :integer          default("0")
+#  role                   :integer
 #
 
 class User < ActiveRecord::Base
@@ -43,13 +44,19 @@ class User < ActiveRecord::Base
          :validatable,   
          :confirmable,   
          :invitable
-
+  enum role:[:user, :admin]    
   validates_presence_of :first_name, :last_name
 
   has_one :account, foreign_key: "owner_id", inverse_of: :owner
   belongs_to :organization, class_name: "Account", inverse_of: :users
   has_many :entries
   has_many :projects, -> { uniq }, through: :entries
+
+  after_initialize :set_default_role, :if => :new_record?
+
+  def set_default_role
+    self.role ||= :user
+  end
 
   def full_name
     "#{first_name} #{last_name}"

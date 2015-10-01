@@ -43,7 +43,7 @@ class ReportsController < ApplicationController
   private
 
   def entries
-    entries = EntryQuery.new(Entry.all, params[:entry_filter]).filter
+    entries = EntryQuery.new(policy_scope(Entry), params[:entry_filter]).filter
     if params[:format] == "csv"
       entries
     else
