@@ -1,0 +1,850 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'dokku-toolbelt' ]
+2 info using npm@2.3.0
+3 info using node@v0.10.31
+4 silly cache add args [ 'dokku-toolbelt', null ]
+5 verbose cache add spec dokku-toolbelt
+6 silly cache add parsed spec { raw: 'dokku-toolbelt',
+6 silly cache add   scope: null,
+6 silly cache add   name: 'dokku-toolbelt',
+6 silly cache add   rawSpec: '',
+6 silly cache add   spec: '*',
+6 silly cache add   type: 'range' }
+7 verbose addNamed dokku-toolbelt@*
+8 silly addNamed semver.valid null
+9 silly addNamed semver.validRange *
+10 silly addNameRange { name: 'dokku-toolbelt', range: '*', hasData: false }
+11 silly mapToRegistry name dokku-toolbelt
+12 silly mapToRegistry using default registry
+13 silly mapToRegistry registry https://registry.npmjs.org/
+14 silly mapToRegistry uri https://registry.npmjs.org/dokku-toolbelt
+15 verbose addNameRange registry:https://registry.npmjs.org/dokku-toolbelt not in flight; fetching
+16 verbose request uri https://registry.npmjs.org/dokku-toolbelt
+17 verbose request no auth needed
+18 info attempt registry request try #1 at 13:05:33
+19 verbose request id 27defec21a644210
+20 verbose etag "3S279TG1MCG75KTHKO8D7IYOU"
+21 http request GET https://registry.npmjs.org/dokku-toolbelt
+22 http 304 https://registry.npmjs.org/dokku-toolbelt
+23 silly get cb [ 304,
+23 silly get   { date: 'Tue, 15 Dec 2015 12:05:34 GMT',
+23 silly get     via: '1.1 varnish',
+23 silly get     'cache-control': 'max-age=300',
+23 silly get     etag: '"3S279TG1MCG75KTHKO8D7IYOU"',
+23 silly get     age: '18',
+23 silly get     connection: 'keep-alive',
+23 silly get     'x-served-by': 'cache-lcy1120-LCY',
+23 silly get     'x-cache': 'HIT',
+23 silly get     'x-cache-hits': '1',
+23 silly get     'x-timer': 'S1450181134.530177,VS0,VE0',
+23 silly get     vary: 'Accept' } ]
+24 verbose etag https://registry.npmjs.org/dokku-toolbelt from cache
+25 silly addNameRange number 2 { name: 'dokku-toolbelt', range: '*', hasData: true }
+26 silly addNameRange versions [ 'dokku-toolbelt',
+26 silly addNameRange   [ '0.0.1',
+26 silly addNameRange     '0.0.2',
+26 silly addNameRange     '0.0.3',
+26 silly addNameRange     '0.0.4',
+26 silly addNameRange     '0.0.5',
+26 silly addNameRange     '1.0.0',
+26 silly addNameRange     '1.1.0',
+26 silly addNameRange     '1.1.1',
+26 silly addNameRange     '1.1.2',
+26 silly addNameRange     '1.1.3' ] ]
+27 verbose addNamed dokku-toolbelt@1.1.3
+28 silly addNamed semver.valid 1.1.3
+29 silly addNamed semver.validRange 1.1.3
+30 silly cache afterAdd dokku-toolbelt@1.1.3
+31 verbose afterAdd /Users/ivanbenko/.npm/dokku-toolbelt/1.1.3/package/package.json not in flight; writing
+32 verbose afterAdd /Users/ivanbenko/.npm/dokku-toolbelt/1.1.3/package/package.json written
+33 silly install resolved [ { name: 'dokku-toolbelt',
+33 silly install resolved     version: '1.1.3',
+33 silly install resolved     description: 'Toolbelt for dokku, similar to the heroku toolbelt',
+33 silly install resolved     main: 'index.js',
+33 silly install resolved     scripts: { test: 'echo true' },
+33 silly install resolved     repository:
+33 silly install resolved      { type: 'git',
+33 silly install resolved        url: 'git+https://github.com/digitalsadhu/dokku-toolbelt.git' },
+33 silly install resolved     keywords: [ 'dokku', 'toolbelt', 'cli', 'docker' ],
+33 silly install resolved     author: { name: 'Richard Walker', email: 'digitalsadhu@gmail.com' },
+33 silly install resolved     license: 'MIT',
+33 silly install resolved     bugs: { url: 'https://github.com/digitalsadhu/dokku-toolbelt/issues' },
+33 silly install resolved     homepage: 'https://github.com/digitalsadhu/dokku-toolbelt#readme',
+33 silly install resolved     dependencies:
+33 silly install resolved      { 'dokku-app-ssh': '^1.0.1',
+33 silly install resolved        'dokku-git-remote-parser': '^1.1.2',
+33 silly install resolved        highland: '^2.5.1',
+33 silly install resolved        minimist: '^1.1.3' },
+33 silly install resolved     preferGlobal: true,
+33 silly install resolved     bin: { dt: 'src/index.js' },
+33 silly install resolved     gitHead: '1ea2c86f29bbaa2e1cda505eb7d5cd29a7155ba5',
+33 silly install resolved     _id: 'dokku-toolbelt@1.1.3',
+33 silly install resolved     _shasum: 'f0a6c0ee751ba175bffc1c7f6a07a72d796af182',
+33 silly install resolved     _from: 'dokku-toolbelt@*',
+33 silly install resolved     _npmVersion: '2.13.3',
+33 silly install resolved     _nodeVersion: '3.0.0',
+33 silly install resolved     _npmUser: { name: 'digitalsadhu', email: 'digitalsadhu@gmail.com' },
+33 silly install resolved     dist:
+33 silly install resolved      { shasum: 'f0a6c0ee751ba175bffc1c7f6a07a72d796af182',
+33 silly install resolved        tarball: 'http://registry.npmjs.org/dokku-toolbelt/-/dokku-toolbelt-1.1.3.tgz' },
+33 silly install resolved     maintainers: [ [Object] ],
+33 silly install resolved     directories: {},
+33 silly install resolved     _resolved: 'https://registry.npmjs.org/dokku-toolbelt/-/dokku-toolbelt-1.1.3.tgz',
+33 silly install resolved     readme: 'ERROR: No README data found!' } ]
+34 info install dokku-toolbelt@1.1.3 into /usr/local/lib
+35 info installOne dokku-toolbelt@1.1.3
+36 verbose installOne of dokku-toolbelt to /usr/local/lib not in flight; installing
+37 verbose lock using /Users/ivanbenko/.npm/_locks/dokku-toolbelt-8d3d798e5ab5e8fd.lock for /usr/local/lib/node_modules/dokku-toolbelt
+38 silly install write writing dokku-toolbelt 1.1.3 to /usr/local/lib/node_modules/dokku-toolbelt
+39 silly cache addNamed cb dokku-toolbelt@1.1.3
+40 verbose unbuild lib/node_modules/dokku-toolbelt
+41 info preuninstall dokku-toolbelt@1.1.1
+42 info uninstall dokku-toolbelt@1.1.1
+43 verbose unbuild rmStuff dokku-toolbelt@1.1.1 from /usr/local/lib/node_modules
+44 verbose gentlyRm verifying that /usr/local is managed by npm
+45 silly isManaged /usr/local is not inside /usr/local/lib/node_modules
+46 silly isManaged /usr/local is not inside /usr/local/lib/node_modules
+47 silly isManaged /usr/local/bin is inside /usr/local
+48 silly gentlyRm /usr/local is managed by npm
+49 silly gentlyRm /usr/local/bin/dt is under /usr/local
+50 verbose gentlyRm vacuuming /usr/local/bin/dt up to /usr/local
+51 info postuninstall dokku-toolbelt@1.1.1
+52 verbose gentlyRm vacuuming /usr/local/lib/node_modules/dokku-toolbelt
+53 silly gentlyRm purging /usr/local/lib/node_modules/dokku-toolbelt
+54 silly gentlyRm quitting because other entries in /usr/local/lib/node_modules
+55 verbose tar unpack /Users/ivanbenko/.npm/dokku-toolbelt/1.1.3/package.tgz
+56 verbose tar unpacking to /usr/local/lib/node_modules/dokku-toolbelt
+57 verbose gentlyRm vacuuming /usr/local/lib/node_modules/dokku-toolbelt
+58 silly gunzTarPerm modes [ '755', '644' ]
+59 silly gunzTarPerm extractEntry package.json
+60 silly gunzTarPerm extractEntry .npmignore
+61 silly gunzTarPerm extractEntry README.md
+62 silly gunzTarPerm extractEntry LICENSE
+63 silly gunzTarPerm extractEntry .travis.yml
+64 silly gunzTarPerm extractEntry src/clean-help-command.js
+65 silly gunzTarPerm extractEntry src/index.js
+66 info preinstall dokku-toolbelt@1.1.3
+67 silly prepareForInstallMany adding dokku-app-ssh@^1.0.1 from dokku-toolbelt dependencies
+68 silly prepareForInstallMany adding dokku-git-remote-parser@^1.1.2 from dokku-toolbelt dependencies
+69 silly prepareForInstallMany adding highland@^2.5.1 from dokku-toolbelt dependencies
+70 silly prepareForInstallMany adding minimist@^1.1.3 from dokku-toolbelt dependencies
+71 silly cache add args [ 'highland@^2.5.1', null ]
+72 verbose cache add spec highland@^2.5.1
+73 silly cache add parsed spec { raw: 'highland@^2.5.1',
+73 silly cache add   scope: null,
+73 silly cache add   name: 'highland',
+73 silly cache add   rawSpec: '^2.5.1',
+73 silly cache add   spec: '>=2.5.1 <3.0.0',
+73 silly cache add   type: 'range' }
+74 verbose addNamed highland@>=2.5.1 <3.0.0
+75 silly addNamed semver.valid null
+76 silly addNamed semver.validRange >=2.5.1 <3.0.0
+77 silly addNameRange { name: 'highland', range: '>=2.5.1 <3.0.0', hasData: false }
+78 silly mapToRegistry name highland
+79 silly mapToRegistry using default registry
+80 silly mapToRegistry registry https://registry.npmjs.org/
+81 silly mapToRegistry uri https://registry.npmjs.org/highland
+82 verbose addNameRange registry:https://registry.npmjs.org/highland not in flight; fetching
+83 silly cache add args [ 'minimist@^1.1.3', null ]
+84 verbose cache add spec minimist@^1.1.3
+85 silly cache add parsed spec { raw: 'minimist@^1.1.3',
+85 silly cache add   scope: null,
+85 silly cache add   name: 'minimist',
+85 silly cache add   rawSpec: '^1.1.3',
+85 silly cache add   spec: '>=1.1.3 <2.0.0',
+85 silly cache add   type: 'range' }
+86 verbose addNamed minimist@>=1.1.3 <2.0.0
+87 silly addNamed semver.valid null
+88 silly addNamed semver.validRange >=1.1.3 <2.0.0
+89 silly addNameRange { name: 'minimist', range: '>=1.1.3 <2.0.0', hasData: false }
+90 silly mapToRegistry name minimist
+91 silly mapToRegistry using default registry
+92 silly mapToRegistry registry https://registry.npmjs.org/
+93 silly mapToRegistry uri https://registry.npmjs.org/minimist
+94 verbose addNameRange registry:https://registry.npmjs.org/minimist not in flight; fetching
+95 silly cache add args [ 'dokku-app-ssh@^1.0.1', null ]
+96 verbose cache add spec dokku-app-ssh@^1.0.1
+97 silly cache add parsed spec { raw: 'dokku-app-ssh@^1.0.1',
+97 silly cache add   scope: null,
+97 silly cache add   name: 'dokku-app-ssh',
+97 silly cache add   rawSpec: '^1.0.1',
+97 silly cache add   spec: '>=1.0.1 <2.0.0',
+97 silly cache add   type: 'range' }
+98 verbose addNamed dokku-app-ssh@>=1.0.1 <2.0.0
+99 silly addNamed semver.valid null
+100 silly addNamed semver.validRange >=1.0.1 <2.0.0
+101 silly addNameRange { name: 'dokku-app-ssh',
+101 silly addNameRange   range: '>=1.0.1 <2.0.0',
+101 silly addNameRange   hasData: false }
+102 silly mapToRegistry name dokku-app-ssh
+103 silly mapToRegistry using default registry
+104 silly mapToRegistry registry https://registry.npmjs.org/
+105 silly mapToRegistry uri https://registry.npmjs.org/dokku-app-ssh
+106 verbose addNameRange registry:https://registry.npmjs.org/dokku-app-ssh not in flight; fetching
+107 silly cache add args [ 'dokku-git-remote-parser@^1.1.2', null ]
+108 verbose cache add spec dokku-git-remote-parser@^1.1.2
+109 silly cache add parsed spec { raw: 'dokku-git-remote-parser@^1.1.2',
+109 silly cache add   scope: null,
+109 silly cache add   name: 'dokku-git-remote-parser',
+109 silly cache add   rawSpec: '^1.1.2',
+109 silly cache add   spec: '>=1.1.2 <2.0.0',
+109 silly cache add   type: 'range' }
+110 verbose addNamed dokku-git-remote-parser@>=1.1.2 <2.0.0
+111 silly addNamed semver.valid null
+112 silly addNamed semver.validRange >=1.1.2 <2.0.0
+113 silly addNameRange { name: 'dokku-git-remote-parser',
+113 silly addNameRange   range: '>=1.1.2 <2.0.0',
+113 silly addNameRange   hasData: false }
+114 silly mapToRegistry name dokku-git-remote-parser
+115 silly mapToRegistry using default registry
+116 silly mapToRegistry registry https://registry.npmjs.org/
+117 silly mapToRegistry uri https://registry.npmjs.org/dokku-git-remote-parser
+118 verbose addNameRange registry:https://registry.npmjs.org/dokku-git-remote-parser not in flight; fetching
+119 verbose request uri https://registry.npmjs.org/dokku-git-remote-parser
+120 verbose request no auth needed
+121 info attempt registry request try #1 at 13:05:34
+122 verbose etag "B8WI2ZLZAWIKJQ3SL9TWKYRQK"
+123 http request GET https://registry.npmjs.org/dokku-git-remote-parser
+124 verbose request uri https://registry.npmjs.org/dokku-app-ssh
+125 verbose request no auth needed
+126 info attempt registry request try #1 at 13:05:34
+127 verbose etag "3CSVYYLW863C45B3N7LU6BQCC"
+128 http request GET https://registry.npmjs.org/dokku-app-ssh
+129 verbose request uri https://registry.npmjs.org/minimist
+130 verbose request no auth needed
+131 info attempt registry request try #1 at 13:05:34
+132 verbose etag "BZN2RBSCCV4DLW5CYU37VOZIJ"
+133 http request GET https://registry.npmjs.org/minimist
+134 verbose request uri https://registry.npmjs.org/highland
+135 verbose request no auth needed
+136 info attempt registry request try #1 at 13:05:34
+137 verbose etag "7PJ36ITIW56SBD4QTMEC4BU6M"
+138 http request GET https://registry.npmjs.org/highland
+139 http 200 https://registry.npmjs.org/minimist
+140 silly get cb [ 200,
+140 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+140 silly get     etag: '"7XX340O68LD9P6MXAIGT2DKMI"',
+140 silly get     'content-type': 'application/json',
+140 silly get     'cache-control': 'max-age=300',
+140 silly get     'content-length': '27381',
+140 silly get     'accept-ranges': 'bytes',
+140 silly get     date: 'Tue, 15 Dec 2015 12:05:34 GMT',
+140 silly get     via: '1.1 varnish',
+140 silly get     age: '177',
+140 silly get     connection: 'keep-alive',
+140 silly get     'x-served-by': 'cache-lcy1133-LCY',
+140 silly get     'x-cache': 'HIT',
+140 silly get     'x-cache-hits': '36',
+140 silly get     'x-timer': 'S1450181134.789299,VS0,VE0',
+140 silly get     vary: 'Accept' } ]
+141 silly addNameRange number 2 { name: 'minimist', range: '>=1.1.3 <2.0.0', hasData: true }
+142 silly addNameRange versions [ 'minimist',
+142 silly addNameRange   [ '0.0.0',
+142 silly addNameRange     '0.0.1',
+142 silly addNameRange     '0.0.2',
+142 silly addNameRange     '0.0.3',
+142 silly addNameRange     '0.0.4',
+142 silly addNameRange     '0.0.5',
+142 silly addNameRange     '0.0.6',
+142 silly addNameRange     '0.0.7',
+142 silly addNameRange     '0.0.8',
+142 silly addNameRange     '0.0.9',
+142 silly addNameRange     '0.0.10',
+142 silly addNameRange     '0.1.0',
+142 silly addNameRange     '0.2.0',
+142 silly addNameRange     '1.0.0',
+142 silly addNameRange     '1.1.0',
+142 silly addNameRange     '1.1.1',
+142 silly addNameRange     '1.1.2',
+142 silly addNameRange     '1.1.3',
+142 silly addNameRange     '1.2.0' ] ]
+143 verbose addNamed minimist@1.2.0
+144 silly addNamed semver.valid 1.2.0
+145 silly addNamed semver.validRange 1.2.0
+146 silly cache afterAdd minimist@1.2.0
+147 verbose afterAdd /Users/ivanbenko/.npm/minimist/1.2.0/package/package.json not in flight; writing
+148 verbose afterAdd /Users/ivanbenko/.npm/minimist/1.2.0/package/package.json written
+149 http 200 https://registry.npmjs.org/highland
+150 silly get cb [ 200,
+150 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+150 silly get     etag: '"2WH9843T93BFOK078S1LY16C0"',
+150 silly get     'content-type': 'application/json',
+150 silly get     'cache-control': 'max-age=300',
+150 silly get     'content-length': '70739',
+150 silly get     'accept-ranges': 'bytes',
+150 silly get     date: 'Tue, 15 Dec 2015 12:05:34 GMT',
+150 silly get     via: '1.1 varnish',
+150 silly get     age: '270',
+150 silly get     connection: 'keep-alive',
+150 silly get     'x-served-by': 'cache-lcy1135-LCY',
+150 silly get     'x-cache': 'HIT',
+150 silly get     'x-cache-hits': '55',
+150 silly get     'x-timer': 'S1450181134.792088,VS0,VE0',
+150 silly get     vary: 'Accept' } ]
+151 silly addNameRange number 2 { name: 'highland', range: '>=2.5.1 <3.0.0', hasData: true }
+152 silly addNameRange versions [ 'highland',
+152 silly addNameRange   [ '0.0.1',
+152 silly addNameRange     '0.0.2',
+152 silly addNameRange     '1.0.0',
+152 silly addNameRange     '1.1.0',
+152 silly addNameRange     '1.2.0',
+152 silly addNameRange     '1.2.1',
+152 silly addNameRange     '1.3.0',
+152 silly addNameRange     '1.4.0',
+152 silly addNameRange     '1.5.0',
+152 silly addNameRange     '1.6.0',
+152 silly addNameRange     '1.7.0',
+152 silly addNameRange     '1.8.0',
+152 silly addNameRange     '1.8.1',
+152 silly addNameRange     '1.9.0',
+152 silly addNameRange     '1.10.0',
+152 silly addNameRange     '1.11.0',
+152 silly addNameRange     '1.12.0',
+152 silly addNameRange     '1.13.0',
+152 silly addNameRange     '1.13.1',
+152 silly addNameRange     '1.13.2',
+152 silly addNameRange     '1.13.3',
+152 silly addNameRange     '1.14.0',
+152 silly addNameRange     '1.15.0',
+152 silly addNameRange     '1.16.0',
+152 silly addNameRange     '1.16.1',
+152 silly addNameRange     '1.16.2',
+152 silly addNameRange     '1.17.0',
+152 silly addNameRange     '1.19.0',
+152 silly addNameRange     '1.18.0',
+152 silly addNameRange     '1.19.1',
+152 silly addNameRange     '1.20.0',
+152 silly addNameRange     '1.22.0',
+152 silly addNameRange     '1.23.0',
+152 silly addNameRange     '1.24.0',
+152 silly addNameRange     '1.24.1',
+152 silly addNameRange     '1.25.0',
+152 silly addNameRange     '1.25.1',
+152 silly addNameRange     '1.25.3',
+152 silly addNameRange     '1.25.4',
+152 silly addNameRange     '1.26.0',
+152 silly addNameRange     '1.26.2',
+152 silly addNameRange     '1.26.3',
+152 silly addNameRange     '1.27.0',
+152 silly addNameRange     '1.27.1',
+152 silly addNameRange     '1.28.0',
+152 silly addNameRange     '1.29.0',
+152 silly addNameRange     '2.0.0',
+152 silly addNameRange     '2.1.0',
+152 silly addNameRange     '2.2.0',
+152 silly addNameRange     '2.3.0',
+152 silly addNameRange     '2.4.0',
+152 silly addNameRange     '2.5.0',
+152 silly addNameRange     '2.5.1' ] ]
+153 verbose addNamed highland@2.5.1
+154 silly addNamed semver.valid 2.5.1
+155 silly addNamed semver.validRange 2.5.1
+156 silly cache afterAdd highland@2.5.1
+157 verbose afterAdd /Users/ivanbenko/.npm/highland/2.5.1/package/package.json not in flight; writing
+158 verbose afterAdd /Users/ivanbenko/.npm/highland/2.5.1/package/package.json written
+159 http 304 https://registry.npmjs.org/dokku-app-ssh
+160 silly get cb [ 304,
+160 silly get   { date: 'Tue, 15 Dec 2015 12:05:34 GMT',
+160 silly get     via: '1.1 varnish',
+160 silly get     'cache-control': 'max-age=300',
+160 silly get     etag: '"3CSVYYLW863C45B3N7LU6BQCC"',
+160 silly get     age: '0',
+160 silly get     connection: 'keep-alive',
+160 silly get     'x-served-by': 'cache-lcy1128-LCY',
+160 silly get     'x-cache': 'MISS',
+160 silly get     'x-cache-hits': '0',
+160 silly get     'x-timer': 'S1450181134.789548,VS0,VE406',
+160 silly get     vary: 'Accept' } ]
+161 verbose etag https://registry.npmjs.org/dokku-app-ssh from cache
+162 silly addNameRange number 2 { name: 'dokku-app-ssh', range: '>=1.0.1 <2.0.0', hasData: true }
+163 silly addNameRange versions [ 'dokku-app-ssh',
+163 silly addNameRange   [ '0.2.0', '0.2.1', '0.2.2', '1.0.0', '1.0.1' ] ]
+164 verbose addNamed dokku-app-ssh@1.0.1
+165 silly addNamed semver.valid 1.0.1
+166 silly addNamed semver.validRange 1.0.1
+167 silly cache afterAdd dokku-app-ssh@1.0.1
+168 verbose afterAdd /Users/ivanbenko/.npm/dokku-app-ssh/1.0.1/package/package.json not in flight; writing
+169 verbose afterAdd /Users/ivanbenko/.npm/dokku-app-ssh/1.0.1/package/package.json written
+170 http 304 https://registry.npmjs.org/dokku-git-remote-parser
+171 silly get cb [ 304,
+171 silly get   { date: 'Tue, 15 Dec 2015 12:05:34 GMT',
+171 silly get     via: '1.1 varnish',
+171 silly get     'cache-control': 'max-age=300',
+171 silly get     etag: '"B8WI2ZLZAWIKJQ3SL9TWKYRQK"',
+171 silly get     age: '0',
+171 silly get     connection: 'keep-alive',
+171 silly get     'x-served-by': 'cache-lcy1132-LCY',
+171 silly get     'x-cache': 'MISS',
+171 silly get     'x-cache-hits': '0',
+171 silly get     'x-timer': 'S1450181134.792523,VS0,VE609',
+171 silly get     vary: 'Accept' } ]
+172 verbose etag https://registry.npmjs.org/dokku-git-remote-parser from cache
+173 silly addNameRange number 2 { name: 'dokku-git-remote-parser',
+173 silly addNameRange   range: '>=1.1.2 <2.0.0',
+173 silly addNameRange   hasData: true }
+174 silly addNameRange versions [ 'dokku-git-remote-parser',
+174 silly addNameRange   [ '0.0.1', '1.0.0', '1.1.0', '1.1.1', '1.1.2' ] ]
+175 verbose addNamed dokku-git-remote-parser@1.1.2
+176 silly addNamed semver.valid 1.1.2
+177 silly addNamed semver.validRange 1.1.2
+178 silly cache afterAdd dokku-git-remote-parser@1.1.2
+179 verbose afterAdd /Users/ivanbenko/.npm/dokku-git-remote-parser/1.1.2/package/package.json not in flight; writing
+180 verbose afterAdd /Users/ivanbenko/.npm/dokku-git-remote-parser/1.1.2/package/package.json written
+181 silly install resolved [ { name: 'minimist',
+181 silly install resolved     version: '1.2.0',
+181 silly install resolved     description: 'parse argument options',
+181 silly install resolved     main: 'index.js',
+181 silly install resolved     devDependencies: { covert: '^1.0.0', tap: '~0.4.0', tape: '^3.5.0' },
+181 silly install resolved     scripts: { test: 'tap test/*.js', coverage: 'covert test/*.js' },
+181 silly install resolved     testling: { files: 'test/*.js', browsers: [Object] },
+181 silly install resolved     repository: { type: 'git', url: 'git://github.com/substack/minimist.git' },
+181 silly install resolved     homepage: 'https://github.com/substack/minimist',
+181 silly install resolved     keywords: [ 'argv', 'getopt', 'parser', 'optimist' ],
+181 silly install resolved     author:
+181 silly install resolved      { name: 'James Halliday',
+181 silly install resolved        email: 'mail@substack.net',
+181 silly install resolved        url: 'http://substack.net' },
+181 silly install resolved     license: 'MIT',
+181 silly install resolved     gitHead: 'dc624482fcfec5bc669c68cdb861f00573ed4e64',
+181 silly install resolved     bugs: { url: 'https://github.com/substack/minimist/issues' },
+181 silly install resolved     _id: 'minimist@1.2.0',
+181 silly install resolved     _shasum: 'a35008b20f41383eec1fb914f4cd5df79a264284',
+181 silly install resolved     _from: 'minimist@>=1.1.3 <2.0.0',
+181 silly install resolved     _npmVersion: '3.2.2',
+181 silly install resolved     _nodeVersion: '2.4.0',
+181 silly install resolved     _npmUser: { name: 'substack', email: 'substack@gmail.com' },
+181 silly install resolved     dist:
+181 silly install resolved      { shasum: 'a35008b20f41383eec1fb914f4cd5df79a264284',
+181 silly install resolved        tarball: 'http://registry.npmjs.org/minimist/-/minimist-1.2.0.tgz' },
+181 silly install resolved     maintainers: [ [Object] ],
+181 silly install resolved     directories: {},
+181 silly install resolved     _resolved: 'https://registry.npmjs.org/minimist/-/minimist-1.2.0.tgz',
+181 silly install resolved     readme: 'ERROR: No README data found!' },
+181 silly install resolved   { name: 'highland',
+181 silly install resolved     version: '2.5.1',
+181 silly install resolved     description: 'The high-level streams library',
+181 silly install resolved     main: 'lib/index.js',
+181 silly install resolved     files: [ 'lib' ],
+181 silly install resolved     homepage: 'http://highlandjs.org/',
+181 silly install resolved     bugs: { url: 'https://github.com/caolan/highland/issues' },
+181 silly install resolved     repository: { type: 'git', url: 'https://github.com/caolan/highland.git' },
+181 silly install resolved     license:
+181 silly install resolved      { type: 'Apache 2.0',
+181 silly install resolved        url: 'https://github.com/caolan/highland/raw/master/LICENSE' },
+181 silly install resolved     devDependencies:
+181 silly install resolved      { browserify: '~3.30.1',
+181 silly install resolved        'concat-stream': '~1.4.1',
+181 silly install resolved        'es6-promise': '~0.1.1',
+181 silly install resolved        grunt: '~0.4.2',
+181 silly install resolved        'grunt-browserify': '~1.3.1',
+181 silly install resolved        'grunt-bump': '0.0.13',
+181 silly install resolved        'grunt-eslint': '~2.1.0',
+181 silly install resolved        'grunt-contrib-nodeunit': '~0.3.0',
+181 silly install resolved        'grunt-contrib-watch': '~0.5.3',
+181 silly install resolved        'grunt-gh-pages': '~0.9.0',
+181 silly install resolved        'grunt-npm': '0.0.2',
+181 silly install resolved        handlebars: '~1.3.0',
+181 silly install resolved        nodeunit: '~0.8.6',
+181 silly install resolved        'nodeunit-tape': '~0.2.0',
+181 silly install resolved        scrawl: '0.0.5',
+181 silly install resolved        sinon: '~1.8.2',
+181 silly install resolved        'stream-array': '~1.0.1',
+181 silly install resolved        tape: '~2.4.2',
+181 silly install resolved        through: '~2.3.4',
+181 silly install resolved        'transducers-js': '~0.4.135',
+181 silly install resolved        eslint: '~0.10.0' },
+181 silly install resolved     scripts: { test: 'eslint Gruntfile.js lib && nodeunit test/test.js' },
+181 silly install resolved     testling: { files: 'test/testling.js', browsers: [Object] },
+181 silly install resolved     gitHead: 'd7fbb1d03c23a8817fb121e34bff40585b2ff964',
+181 silly install resolved     _id: 'highland@2.5.1',
+181 silly install resolved     _shasum: 'ffa802fe0a4d574e2033621a5cfa4b6d4159ab76',
+181 silly install resolved     _from: 'highland@>=2.5.1 <3.0.0',
+181 silly install resolved     _npmVersion: '2.0.0',
+181 silly install resolved     _npmUser: { name: 'jeromew', email: 'jerome.wagner@m4x.org' },
+181 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+181 silly install resolved     dist:
+181 silly install resolved      { shasum: 'ffa802fe0a4d574e2033621a5cfa4b6d4159ab76',
+181 silly install resolved        tarball: 'http://registry.npmjs.org/highland/-/highland-2.5.1.tgz' },
+181 silly install resolved     directories: {},
+181 silly install resolved     _resolved: 'https://registry.npmjs.org/highland/-/highland-2.5.1.tgz',
+181 silly install resolved     readme: 'ERROR: No README data found!' },
+181 silly install resolved   { name: 'dokku-app-ssh',
+181 silly install resolved     version: '1.0.1',
+181 silly install resolved     description: 'Creates a dokku ssh command string from host, command and appName strings. Handles edge cases for you',
+181 silly install resolved     main: 'index.js',
+181 silly install resolved     scripts: { test: 'mocha test --reporter=spec' },
+181 silly install resolved     repository:
+181 silly install resolved      { type: 'git',
+181 silly install resolved        url: 'git+https://github.com/digitalsadhu/dokku-app-ssh.git' },
+181 silly install resolved     keywords: [ 'dokku', 'ssh' ],
+181 silly install resolved     author: { name: 'Richard Walker', email: 'digitalsadhu@gmail.com' },
+181 silly install resolved     license: 'MIT',
+181 silly install resolved     bugs: { url: 'https://github.com/digitalsadhu/dokku-app-ssh/issues' },
+181 silly install resolved     homepage: 'https://github.com/digitalsadhu/dokku-app-ssh#readme',
+181 silly install resolved     devDependencies: { expect: '^1.8.0', mocha: '^2.2.5', standard: '^4.5.4' },
+181 silly install resolved     dependencies: {},
+181 silly install resolved     gitHead: '6e0d0f65b8192adf41bea29d1dc61bc634270450',
+181 silly install resolved     _id: 'dokku-app-ssh@1.0.1',
+181 silly install resolved     _shasum: '7c5a8dd0116a7039057d4635862bb1bbbb41b295',
+181 silly install resolved     _from: 'dokku-app-ssh@>=1.0.1 <2.0.0',
+181 silly install resolved     _npmVersion: '2.13.3',
+181 silly install resolved     _nodeVersion: '3.0.0',
+181 silly install resolved     _npmUser: { name: 'digitalsadhu', email: 'digitalsadhu@gmail.com' },
+181 silly install resolved     dist:
+181 silly install resolved      { shasum: '7c5a8dd0116a7039057d4635862bb1bbbb41b295',
+181 silly install resolved        tarball: 'http://registry.npmjs.org/dokku-app-ssh/-/dokku-app-ssh-1.0.1.tgz' },
+181 silly install resolved     maintainers: [ [Object] ],
+181 silly install resolved     directories: {},
+181 silly install resolved     _resolved: 'https://registry.npmjs.org/dokku-app-ssh/-/dokku-app-ssh-1.0.1.tgz',
+181 silly install resolved     readme: 'ERROR: No README data found!' },
+181 silly install resolved   { name: 'dokku-git-remote-parser',
+181 silly install resolved     version: '1.1.2',
+181 silly install resolved     description: 'Retrieves dokku host and app name from a directory by reading and parsing the git remotes',
+181 silly install resolved     main: 'index.js',
+181 silly install resolved     scripts: { test: 'mocha test --reporter=spec' },
+181 silly install resolved     repository:
+181 silly install resolved      { type: 'git',
+181 silly install resolved        url: 'git+ssh://git@github.com/digitalsadhu/dokku-git-remote-parser.git' },
+181 silly install resolved     author: { name: 'Richard Walker', email: 'digitalsadhu@gmail.com' },
+181 silly install resolved     license: 'MIT',
+181 silly install resolved     bugs: { url: 'https://github.com/digitalsadhu/dokku-git-remote-parser/issues' },
+181 silly install resolved     homepage: 'https://github.com/digitalsadhu/dokku-git-remote-parser#readme',
+181 silly install resolved     dependencies: { 'git-remotes': '^1.0.0' },
+181 silly install resolved     devDependencies: { expect: '^1.9.0', mocha: '^2.2.5' },
+181 silly install resolved     gitHead: 'a7fffd592bfc64532bf1b726bcfaf83bb4cb5d9f',
+181 silly install resolved     _id: 'dokku-git-remote-parser@1.1.2',
+181 silly install resolved     _shasum: 'f3c3b2d7d54a67e7fba9e88e07b59086ce7d711c',
+181 silly install resolved     _from: 'dokku-git-remote-parser@>=1.1.2 <2.0.0',
+181 silly install resolved     _npmVersion: '2.13.3',
+181 silly install resolved     _nodeVersion: '3.0.0',
+181 silly install resolved     _npmUser: { name: 'digitalsadhu', email: 'digitalsadhu@gmail.com' },
+181 silly install resolved     dist:
+181 silly install resolved      { shasum: 'f3c3b2d7d54a67e7fba9e88e07b59086ce7d711c',
+181 silly install resolved        tarball: 'http://registry.npmjs.org/dokku-git-remote-parser/-/dokku-git-remote-parser-1.1.2.tgz' },
+181 silly install resolved     maintainers: [ [Object] ],
+181 silly install resolved     directories: {},
+181 silly install resolved     _resolved: 'https://registry.npmjs.org/dokku-git-remote-parser/-/dokku-git-remote-parser-1.1.2.tgz',
+181 silly install resolved     readme: 'ERROR: No README data found!' } ]
+182 info install minimist@1.2.0 into /usr/local/lib/node_modules/dokku-toolbelt
+183 info install highland@2.5.1 into /usr/local/lib/node_modules/dokku-toolbelt
+184 info install dokku-app-ssh@1.0.1 into /usr/local/lib/node_modules/dokku-toolbelt
+185 info install dokku-git-remote-parser@1.1.2 into /usr/local/lib/node_modules/dokku-toolbelt
+186 info installOne minimist@1.2.0
+187 verbose installOne of minimist to /usr/local/lib/node_modules/dokku-toolbelt not in flight; installing
+188 info installOne highland@2.5.1
+189 verbose installOne of highland to /usr/local/lib/node_modules/dokku-toolbelt not in flight; installing
+190 info installOne dokku-app-ssh@1.0.1
+191 verbose installOne of dokku-app-ssh to /usr/local/lib/node_modules/dokku-toolbelt not in flight; installing
+192 info installOne dokku-git-remote-parser@1.1.2
+193 verbose installOne of dokku-git-remote-parser to /usr/local/lib/node_modules/dokku-toolbelt not in flight; installing
+194 verbose lock using /Users/ivanbenko/.npm/_locks/minimist-3a8d79eeabdcef26.lock for /usr/local/lib/node_modules/dokku-toolbelt/node_modules/minimist
+195 verbose lock using /Users/ivanbenko/.npm/_locks/dokku-app-ssh-fe88df200e873bb9.lock for /usr/local/lib/node_modules/dokku-toolbelt/node_modules/dokku-app-ssh
+196 verbose lock using /Users/ivanbenko/.npm/_locks/highland-269f7cf8d06760a3.lock for /usr/local/lib/node_modules/dokku-toolbelt/node_modules/highland
+197 silly install write writing minimist 1.2.0 to /usr/local/lib/node_modules/dokku-toolbelt/node_modules/minimist
+198 silly cache addNamed cb minimist@1.2.0
+199 verbose unbuild lib/node_modules/dokku-toolbelt/node_modules/minimist
+200 silly install write writing dokku-app-ssh 1.0.1 to /usr/local/lib/node_modules/dokku-toolbelt/node_modules/dokku-app-ssh
+201 silly cache addNamed cb dokku-app-ssh@1.0.1
+202 verbose unbuild lib/node_modules/dokku-toolbelt/node_modules/dokku-app-ssh
+203 silly install write writing highland 2.5.1 to /usr/local/lib/node_modules/dokku-toolbelt/node_modules/highland
+204 silly cache addNamed cb highland@2.5.1
+205 verbose unbuild lib/node_modules/dokku-toolbelt/node_modules/highland
+206 verbose lock using /Users/ivanbenko/.npm/_locks/dokku-git-remote-parser-82a48371d9365621.lock for /usr/local/lib/node_modules/dokku-toolbelt/node_modules/dokku-git-remote-parser
+207 silly install write writing dokku-git-remote-parser 1.1.2 to /usr/local/lib/node_modules/dokku-toolbelt/node_modules/dokku-git-remote-parser
+208 silly cache addNamed cb dokku-git-remote-parser@1.1.2
+209 verbose unbuild lib/node_modules/dokku-toolbelt/node_modules/dokku-git-remote-parser
+210 verbose gentlyRm vacuuming /usr/local/lib/node_modules/dokku-toolbelt/node_modules/minimist
+211 verbose gentlyRm vacuuming /usr/local/lib/node_modules/dokku-toolbelt/node_modules/dokku-app-ssh
+212 verbose gentlyRm vacuuming /usr/local/lib/node_modules/dokku-toolbelt/node_modules/highland
+213 verbose tar unpack /Users/ivanbenko/.npm/minimist/1.2.0/package.tgz
+214 verbose tar unpacking to /usr/local/lib/node_modules/dokku-toolbelt/node_modules/minimist
+215 verbose gentlyRm vacuuming /usr/local/lib/node_modules/dokku-toolbelt/node_modules/minimist
+216 verbose tar unpack /Users/ivanbenko/.npm/dokku-app-ssh/1.0.1/package.tgz
+217 verbose tar unpacking to /usr/local/lib/node_modules/dokku-toolbelt/node_modules/dokku-app-ssh
+218 verbose gentlyRm vacuuming /usr/local/lib/node_modules/dokku-toolbelt/node_modules/dokku-app-ssh
+219 verbose tar unpack /Users/ivanbenko/.npm/highland/2.5.1/package.tgz
+220 verbose tar unpacking to /usr/local/lib/node_modules/dokku-toolbelt/node_modules/highland
+221 verbose gentlyRm vacuuming /usr/local/lib/node_modules/dokku-toolbelt/node_modules/highland
+222 verbose gentlyRm vacuuming /usr/local/lib/node_modules/dokku-toolbelt/node_modules/dokku-git-remote-parser
+223 silly gunzTarPerm modes [ '755', '644' ]
+224 silly gunzTarPerm modes [ '755', '644' ]
+225 silly gunzTarPerm modes [ '755', '644' ]
+226 verbose tar unpack /Users/ivanbenko/.npm/dokku-git-remote-parser/1.1.2/package.tgz
+227 verbose tar unpacking to /usr/local/lib/node_modules/dokku-toolbelt/node_modules/dokku-git-remote-parser
+228 verbose gentlyRm vacuuming /usr/local/lib/node_modules/dokku-toolbelt/node_modules/dokku-git-remote-parser
+229 silly gunzTarPerm modes [ '755', '644' ]
+230 silly gunzTarPerm extractEntry package.json
+231 silly gunzTarPerm extractEntry package.json
+232 silly gunzTarPerm extractEntry package.json
+233 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+234 silly gunzTarPerm extractEntry package.json
+235 silly gunzTarPerm extractEntry LICENSE
+236 silly gunzTarPerm extractEntry index.js
+237 silly gunzTarPerm extractEntry .npmignore
+238 silly gunzTarPerm extractEntry README.md
+239 silly gunzTarPerm extractEntry README.md
+240 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+241 silly gunzTarPerm extractEntry lib/index.js
+242 silly gunzTarPerm modified mode [ 'lib/index.js', 509, 493 ]
+243 silly gunzTarPerm extractEntry .npmignore
+244 silly gunzTarPerm extractEntry README.md
+245 silly gunzTarPerm extractEntry .travis.yml
+246 silly gunzTarPerm extractEntry example/parse.js
+247 silly gunzTarPerm extractEntry LICENSE
+248 silly gunzTarPerm extractEntry index.js
+249 silly gunzTarPerm extractEntry LICENSE
+250 silly gunzTarPerm extractEntry index.js
+251 silly gunzTarPerm extractEntry .travis.yml
+252 silly gunzTarPerm extractEntry test/index.spec.js
+253 silly gunzTarPerm extractEntry .travis.yml
+254 silly gunzTarPerm extractEntry test/index.spec.js
+255 silly gunzTarPerm extractEntry readme.markdown
+256 silly gunzTarPerm extractEntry test/all_bool.js
+257 silly gunzTarPerm extractEntry test/default_bool.js
+258 silly gunzTarPerm extractEntry test/dotted.js
+259 silly gunzTarPerm extractEntry test/kv_short.js
+260 silly gunzTarPerm extractEntry test/long.js
+261 silly gunzTarPerm extractEntry test/dash.js
+262 silly gunzTarPerm extractEntry test/parse.js
+263 silly gunzTarPerm extractEntry test/parse_modified.js
+264 silly gunzTarPerm extractEntry test/short.js
+265 silly gunzTarPerm extractEntry test/stop_early.js
+266 silly gunzTarPerm extractEntry test/unknown.js
+267 silly gunzTarPerm extractEntry test/bool.js
+268 silly gunzTarPerm extractEntry test/whitespace.js
+269 silly gunzTarPerm extractEntry test/num.js
+270 info preinstall dokku-git-remote-parser@1.1.2
+271 info preinstall dokku-app-ssh@1.0.1
+272 silly prepareForInstallMany adding git-remotes@^1.0.0 from dokku-git-remote-parser dependencies
+273 silly cache add args [ 'git-remotes@^1.0.0', null ]
+274 verbose cache add spec git-remotes@^1.0.0
+275 silly cache add parsed spec { raw: 'git-remotes@^1.0.0',
+275 silly cache add   scope: null,
+275 silly cache add   name: 'git-remotes',
+275 silly cache add   rawSpec: '^1.0.0',
+275 silly cache add   spec: '>=1.0.0 <2.0.0',
+275 silly cache add   type: 'range' }
+276 verbose addNamed git-remotes@>=1.0.0 <2.0.0
+277 silly addNamed semver.valid null
+278 silly addNamed semver.validRange >=1.0.0 <2.0.0
+279 silly addNameRange { name: 'git-remotes', range: '>=1.0.0 <2.0.0', hasData: false }
+280 silly mapToRegistry name git-remotes
+281 silly mapToRegistry using default registry
+282 silly mapToRegistry registry https://registry.npmjs.org/
+283 silly mapToRegistry uri https://registry.npmjs.org/git-remotes
+284 verbose addNameRange registry:https://registry.npmjs.org/git-remotes not in flight; fetching
+285 silly install resolved []
+286 verbose about to build /usr/local/lib/node_modules/dokku-toolbelt/node_modules/dokku-app-ssh
+287 info build /usr/local/lib/node_modules/dokku-toolbelt/node_modules/dokku-app-ssh
+288 verbose linkStuff [ true,
+288 verbose linkStuff   '/usr/local/lib/node_modules',
+288 verbose linkStuff   false,
+288 verbose linkStuff   '/usr/local/lib/node_modules/dokku-toolbelt/node_modules' ]
+289 info linkStuff dokku-app-ssh@1.0.1
+290 verbose linkBins dokku-app-ssh@1.0.1
+291 verbose linkMans dokku-app-ssh@1.0.1
+292 verbose rebuildBundles dokku-app-ssh@1.0.1
+293 info install dokku-app-ssh@1.0.1
+294 info postinstall dokku-app-ssh@1.0.1
+295 verbose request uri https://registry.npmjs.org/git-remotes
+296 verbose request no auth needed
+297 info attempt registry request try #1 at 13:05:35
+298 verbose etag "4KBGIC646QWZM2I25ZPM3NUJW"
+299 http request GET https://registry.npmjs.org/git-remotes
+300 verbose unlock done using /Users/ivanbenko/.npm/_locks/dokku-app-ssh-fe88df200e873bb9.lock for /usr/local/lib/node_modules/dokku-toolbelt/node_modules/dokku-app-ssh
+301 info preinstall highland@2.5.1
+302 silly install resolved []
+303 verbose about to build /usr/local/lib/node_modules/dokku-toolbelt/node_modules/highland
+304 info build /usr/local/lib/node_modules/dokku-toolbelt/node_modules/highland
+305 verbose linkStuff [ true,
+305 verbose linkStuff   '/usr/local/lib/node_modules',
+305 verbose linkStuff   false,
+305 verbose linkStuff   '/usr/local/lib/node_modules/dokku-toolbelt/node_modules' ]
+306 info linkStuff highland@2.5.1
+307 verbose linkBins highland@2.5.1
+308 verbose linkMans highland@2.5.1
+309 verbose rebuildBundles highland@2.5.1
+310 info install highland@2.5.1
+311 info postinstall highland@2.5.1
+312 info preinstall minimist@1.2.0
+313 verbose unlock done using /Users/ivanbenko/.npm/_locks/highland-269f7cf8d06760a3.lock for /usr/local/lib/node_modules/dokku-toolbelt/node_modules/highland
+314 silly install resolved []
+315 verbose about to build /usr/local/lib/node_modules/dokku-toolbelt/node_modules/minimist
+316 info build /usr/local/lib/node_modules/dokku-toolbelt/node_modules/minimist
+317 verbose linkStuff [ true,
+317 verbose linkStuff   '/usr/local/lib/node_modules',
+317 verbose linkStuff   false,
+317 verbose linkStuff   '/usr/local/lib/node_modules/dokku-toolbelt/node_modules' ]
+318 info linkStuff minimist@1.2.0
+319 verbose linkBins minimist@1.2.0
+320 verbose linkMans minimist@1.2.0
+321 verbose rebuildBundles minimist@1.2.0
+322 info install minimist@1.2.0
+323 info postinstall minimist@1.2.0
+324 verbose unlock done using /Users/ivanbenko/.npm/_locks/minimist-3a8d79eeabdcef26.lock for /usr/local/lib/node_modules/dokku-toolbelt/node_modules/minimist
+325 http 304 https://registry.npmjs.org/git-remotes
+326 silly get cb [ 304,
+326 silly get   { date: 'Tue, 15 Dec 2015 12:05:35 GMT',
+326 silly get     via: '1.1 varnish',
+326 silly get     'cache-control': 'max-age=300',
+326 silly get     etag: '"4KBGIC646QWZM2I25ZPM3NUJW"',
+326 silly get     age: '0',
+326 silly get     connection: 'keep-alive',
+326 silly get     'x-served-by': 'cache-lcy1125-LCY',
+326 silly get     'x-cache': 'MISS',
+326 silly get     'x-cache-hits': '0',
+326 silly get     'x-timer': 'S1450181135.620656,VS0,VE94',
+326 silly get     vary: 'Accept' } ]
+327 verbose etag https://registry.npmjs.org/git-remotes from cache
+328 silly addNameRange number 2 { name: 'git-remotes', range: '>=1.0.0 <2.0.0', hasData: true }
+329 silly addNameRange versions [ 'git-remotes', [ '1.0.0', '1.0.1', '1.0.2' ] ]
+330 verbose addNamed git-remotes@1.0.2
+331 silly addNamed semver.valid 1.0.2
+332 silly addNamed semver.validRange 1.0.2
+333 silly cache afterAdd git-remotes@1.0.2
+334 verbose afterAdd /Users/ivanbenko/.npm/git-remotes/1.0.2/package/package.json not in flight; writing
+335 verbose afterAdd /Users/ivanbenko/.npm/git-remotes/1.0.2/package/package.json written
+336 silly install resolved [ { name: 'git-remotes',
+336 silly install resolved     version: '1.0.2',
+336 silly install resolved     description: 'Fetch git remotes (A nice parsed version of `git remote -v`)',
+336 silly install resolved     main: 'index.js',
+336 silly install resolved     scripts: { test: 'mocha test --reporter=spec' },
+336 silly install resolved     repository:
+336 silly install resolved      { type: 'git',
+336 silly install resolved        url: 'git+https://github.com/digitalsadhu/git-remotes.git' },
+336 silly install resolved     keywords: [ 'git', 'remote' ],
+336 silly install resolved     author: { name: 'Richard Walker', email: 'digitalsadhu@gmail.com' },
+336 silly install resolved     license: 'MIT',
+336 silly install resolved     bugs: { url: 'https://github.com/digitalsadhu/git-remotes/issues' },
+336 silly install resolved     homepage: 'https://github.com/digitalsadhu/git-remotes#readme',
+336 silly install resolved     devDependencies: { expect: '^1.9.0', mocha: '^2.2.5' },
+336 silly install resolved     gitHead: 'e04dfa3067421f8dc6e7a27d0412c45c6bef5362',
+336 silly install resolved     _id: 'git-remotes@1.0.2',
+336 silly install resolved     _shasum: 'bc079202fd1b63aa409ebf06f5a4f5610de6baf2',
+336 silly install resolved     _from: 'git-remotes@>=1.0.0 <2.0.0',
+336 silly install resolved     _npmVersion: '2.13.3',
+336 silly install resolved     _nodeVersion: '3.0.0',
+336 silly install resolved     _npmUser: { name: 'digitalsadhu', email: 'digitalsadhu@gmail.com' },
+336 silly install resolved     dist:
+336 silly install resolved      { shasum: 'bc079202fd1b63aa409ebf06f5a4f5610de6baf2',
+336 silly install resolved        tarball: 'http://registry.npmjs.org/git-remotes/-/git-remotes-1.0.2.tgz' },
+336 silly install resolved     maintainers: [ [Object] ],
+336 silly install resolved     directories: {},
+336 silly install resolved     _resolved: 'https://registry.npmjs.org/git-remotes/-/git-remotes-1.0.2.tgz',
+336 silly install resolved     readme: 'ERROR: No README data found!' } ]
+337 info install git-remotes@1.0.2 into /usr/local/lib/node_modules/dokku-toolbelt/node_modules/dokku-git-remote-parser
+338 info installOne git-remotes@1.0.2
+339 verbose installOne of git-remotes to /usr/local/lib/node_modules/dokku-toolbelt/node_modules/dokku-git-remote-parser not in flight; installing
+340 verbose lock using /Users/ivanbenko/.npm/_locks/git-remotes-6eec686d542edf0f.lock for /usr/local/lib/node_modules/dokku-toolbelt/node_modules/dokku-git-remote-parser/node_modules/git-remotes
+341 silly install write writing git-remotes 1.0.2 to /usr/local/lib/node_modules/dokku-toolbelt/node_modules/dokku-git-remote-parser/node_modules/git-remotes
+342 silly cache addNamed cb git-remotes@1.0.2
+343 verbose unbuild lib/node_modules/dokku-toolbelt/node_modules/dokku-git-remote-parser/node_modules/git-remotes
+344 verbose gentlyRm vacuuming /usr/local/lib/node_modules/dokku-toolbelt/node_modules/dokku-git-remote-parser/node_modules/git-remotes
+345 verbose tar unpack /Users/ivanbenko/.npm/git-remotes/1.0.2/package.tgz
+346 verbose tar unpacking to /usr/local/lib/node_modules/dokku-toolbelt/node_modules/dokku-git-remote-parser/node_modules/git-remotes
+347 verbose gentlyRm vacuuming /usr/local/lib/node_modules/dokku-toolbelt/node_modules/dokku-git-remote-parser/node_modules/git-remotes
+348 silly gunzTarPerm modes [ '755', '644' ]
+349 silly gunzTarPerm extractEntry package.json
+350 silly gunzTarPerm extractEntry .npmignore
+351 silly gunzTarPerm extractEntry README.md
+352 silly gunzTarPerm extractEntry LICENSE
+353 silly gunzTarPerm extractEntry index.js
+354 silly gunzTarPerm extractEntry .travis.yml
+355 silly gunzTarPerm extractEntry test/index.js
+356 info preinstall git-remotes@1.0.2
+357 silly install resolved []
+358 verbose about to build /usr/local/lib/node_modules/dokku-toolbelt/node_modules/dokku-git-remote-parser/node_modules/git-remotes
+359 info build /usr/local/lib/node_modules/dokku-toolbelt/node_modules/dokku-git-remote-parser/node_modules/git-remotes
+360 verbose linkStuff [ true,
+360 verbose linkStuff   '/usr/local/lib/node_modules',
+360 verbose linkStuff   false,
+360 verbose linkStuff   '/usr/local/lib/node_modules/dokku-toolbelt/node_modules/dokku-git-remote-parser/node_modules' ]
+361 info linkStuff git-remotes@1.0.2
+362 verbose linkBins git-remotes@1.0.2
+363 verbose linkMans git-remotes@1.0.2
+364 verbose rebuildBundles git-remotes@1.0.2
+365 info install git-remotes@1.0.2
+366 info postinstall git-remotes@1.0.2
+367 verbose unlock done using /Users/ivanbenko/.npm/_locks/git-remotes-6eec686d542edf0f.lock for /usr/local/lib/node_modules/dokku-toolbelt/node_modules/dokku-git-remote-parser/node_modules/git-remotes
+368 verbose about to build /usr/local/lib/node_modules/dokku-toolbelt/node_modules/dokku-git-remote-parser
+369 info build /usr/local/lib/node_modules/dokku-toolbelt/node_modules/dokku-git-remote-parser
+370 verbose linkStuff [ true,
+370 verbose linkStuff   '/usr/local/lib/node_modules',
+370 verbose linkStuff   false,
+370 verbose linkStuff   '/usr/local/lib/node_modules/dokku-toolbelt/node_modules' ]
+371 info linkStuff dokku-git-remote-parser@1.1.2
+372 verbose linkBins dokku-git-remote-parser@1.1.2
+373 verbose linkMans dokku-git-remote-parser@1.1.2
+374 verbose rebuildBundles dokku-git-remote-parser@1.1.2
+375 verbose rebuildBundles [ 'git-remotes' ]
+376 info install dokku-git-remote-parser@1.1.2
+377 info postinstall dokku-git-remote-parser@1.1.2
+378 verbose unlock done using /Users/ivanbenko/.npm/_locks/dokku-git-remote-parser-82a48371d9365621.lock for /usr/local/lib/node_modules/dokku-toolbelt/node_modules/dokku-git-remote-parser
+379 verbose about to build /usr/local/lib/node_modules/dokku-toolbelt
+380 info build /usr/local/lib/node_modules/dokku-toolbelt
+381 verbose linkStuff [ true,
+381 verbose linkStuff   '/usr/local/lib/node_modules',
+381 verbose linkStuff   true,
+381 verbose linkStuff   '/usr/local/lib/node_modules' ]
+382 info linkStuff dokku-toolbelt@1.1.3
+383 verbose linkBins dokku-toolbelt@1.1.3
+384 verbose link bins [ { dt: 'src/index.js' }, '/usr/local/bin', true ]
+385 verbose linkMans dokku-toolbelt@1.1.3
+386 verbose rebuildBundles dokku-toolbelt@1.1.3
+387 verbose rebuildBundles [ 'dokku-app-ssh',
+387 verbose rebuildBundles   'dokku-git-remote-parser',
+387 verbose rebuildBundles   'highland',
+387 verbose rebuildBundles   'minimist' ]
+388 verbose gentlyRm verifying that /usr/local is managed by npm
+389 silly isManaged /usr/local is not inside /usr/local/lib/node_modules
+390 silly isManaged /usr/local is not inside /usr/local/lib/node_modules
+391 silly isManaged /usr/local is not inside /usr/local/bin
+392 silly isManaged /usr/local is inside /usr/local
+393 silly gentlyRm /usr/local is managed by npm
+394 silly gentlyRm /usr/local/bin/dt is under /usr/local
+395 verbose gentlyRm vacuuming /usr/local/bin/dt up to /usr/local
+396 info install dokku-toolbelt@1.1.3
+397 info postinstall dokku-toolbelt@1.1.3
+398 verbose unlock done using /Users/ivanbenko/.npm/_locks/dokku-toolbelt-8d3d798e5ab5e8fd.lock for /usr/local/lib/node_modules/dokku-toolbelt
+399 warn unmet dependency /usr/local/lib/node_modules/generator-angular-ui-router/node_modules/yeoman-generator/node_modules/inquirer requires lodash@'~1.2.1' but will load
+399 warn unmet dependency /usr/local/lib/node_modules/generator-angular-ui-router/node_modules/yeoman-generator/node_modules/lodash,
+399 warn unmet dependency which is version 1.3.1
+400 warn unmet dependency /usr/local/lib/node_modules/generator-angular-ui-router/node_modules/yeoman-generator/node_modules/findup-sync requires lodash@'~2.4.1' but will load
+400 warn unmet dependency /usr/local/lib/node_modules/generator-angular-ui-router/node_modules/yeoman-generator/node_modules/lodash,
+400 warn unmet dependency which is version 1.3.1
+401 warn unmet dependency /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/file-utils requires glob@'~3.2.6' but will load
+401 warn unmet dependency /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/glob,
+401 warn unmet dependency which is version 4.0.6
+402 warn unmet dependency /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/findup-sync requires glob@'~3.2.9' but will load
+402 warn unmet dependency /usr/local/lib/node_modules/generator-karma/node_modules/yeoman-generator/node_modules/glob,
+402 warn unmet dependency which is version 4.0.6
+403 warn unmet dependency /usr/local/lib/node_modules/phonegap/node_modules/phonegap-build requires colors@'0.6.x' but will load
+403 warn unmet dependency /usr/local/lib/node_modules/phonegap/node_modules/colors,
+403 warn unmet dependency which is version 0.6.0-1
+404 warn unmet dependency /usr/local/lib/node_modules/phonegap/node_modules/connect-phonegap/node_modules/connect/node_modules/multiparty/node_modules/stream-counter requires readable-stream@'~1.1.8' but will load
+404 warn unmet dependency /usr/local/lib/node_modules/phonegap/node_modules/connect-phonegap/node_modules/connect/node_modules/multiparty/node_modules/readable-stream,
+404 warn unmet dependency which is version 1.1.13-1
+405 warn unmet dependency /usr/local/lib/node_modules/phonegap/node_modules/prompt/node_modules/winston requires colors@'0.x.x' but will load
+405 warn unmet dependency /usr/local/lib/node_modules/phonegap/node_modules/colors,
+405 warn unmet dependency which is version 0.6.0-1
+406 verbose stack Error: The package generator-karma does not satisfy its siblings' peerDependencies requirements!
+406 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:103:32
+406 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:225:5
+406 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:138:5
+406 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+406 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+406 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+406 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+406 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+406 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+406 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:251:14
+407 verbose cwd /Users/ivanbenko/work/sources/hours
+408 error Darwin 14.5.0
+409 error argv "node" "/usr/local/bin/npm" "install" "-g" "dokku-toolbelt"
+410 error node v0.10.31
+411 error npm  v2.3.0
+412 error code EPEERINVALID
+413 error peerinvalid The package generator-karma does not satisfy its siblings' peerDependencies requirements!
+413 error peerinvalid Peer generator-angular@0.9.8 wants generator-karma@>=0.8.2
+413 error peerinvalid Peer generator-angular-ui-router@0.5.3 wants generator-karma@~0.5.0
+414 verbose exit [ 1, true ]

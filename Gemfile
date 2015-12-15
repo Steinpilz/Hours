@@ -1,8 +1,6 @@
 source "https://rubygems.org"
 source "https://rails-assets.org"
 
-ruby "2.2.0"
-
 gem "airbrake"
 gem "bourbon"
 gem "coffee-rails"
@@ -46,6 +44,7 @@ gem "foreman"
 gem 'rubyzip'
 gem 'zip-zip'
 gem 'pundit'
+gem 'puma'
 # caching
 
 gem "kgio" # faster I/O
