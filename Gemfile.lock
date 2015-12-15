@@ -233,6 +233,7 @@ GEM
       slop (~> 3.4)
     pry-rails (0.3.2)
       pry (>= 0.9.10)
+    puma (2.15.3)
     pundit (1.0.1)
       activesupport (>= 3.0.0)
     rack (1.6.0)
@@ -427,6 +428,7 @@ DEPENDENCIES
   pikaday-gem (~> 1.1.0.0)
   pry
   pry-rails
+  puma
   pundit
   rack-timeout
   rails (~> 4.2.0)
@@ -450,3 +452,6 @@ DEPENDENCIES
   unicorn
   webmock
   zip-zip
+
+BUNDLED WITH
+   1.11.1
